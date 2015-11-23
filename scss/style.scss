@@ -87,7 +87,7 @@ ul, ul li{
 
 	&__icon{
 		color: $brand-danger;
-		@include padding-horizontal(10px, 20px);
+		@include margin-horizontal(10px, 20px);
 	}
 	
 	&__link{
@@ -102,9 +102,86 @@ ul, ul li{
 			background: lighten($brand-danger, 35%);
 			
 		}
+
+		&--playlist{
+			@include padding-vertical(10px, 10px);
+			display: block;
+		}
+	}
+
+	&--playlist{
+		@include padding-custom(15px, 0, 5px, 0);
 	}
 }
 
 .content{
 	float:left;
+}
+
+.singer{
+
+	&__img{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		@include background;
+		display: inline-block;
+		vertical-align: middle;
+		@include margin-horizontal(10px, 20px);
+	}
+
+	&__info{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__song{
+		display: block;
+		@include font($font-family-seldom,16px,$gray-darker,none);
+	}
+
+	&__name{
+		display: block;
+		@include font($font-family-seldom,14px,$gray,none);
+	}
+}
+
+.btn{
+
+	border:1px solid;
+	border-radius: 10px;
+	@include padding-custom(10px, 20px, 10px, 20px);
+	outline:none;
+	
+	&--download{
+		background: transparent;
+		@include font($font-family-seldom,18px,$brand-warning,none);
+		&:hover,
+		&:focus{
+			background: $brand-warning;
+			color: $brand-primary;
+		}
+	}
+}
+
+.download{
+	&-holder{
+		text-align: center;
+		border-top: 1px solid darken($brand-primary, 20%);
+	}
+}
+
+.slogan{
+
+	&__top{
+		@include font($font-family-seldom,33px,$gray-darker,none);
+		display: block;
+		
+	}
+
+	&__bottom{
+		@include font($font-family-rare,33px,$brand-success,none);
+		display: block;
+		
+	}
 }
