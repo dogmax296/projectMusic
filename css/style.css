@@ -1,4 +1,32 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'LetristaScript';
+  src: url("../../fonts//LetristaScript.eot?#iefix") format("embedded-opentype"), url("../../fonts//LetristaScript.otf") format("opentype"), url("../../fonts//LetristaScript.woff") format("woff"), url("../../fonts//LetristaScript.ttf") format("truetype"), url("../../fonts//LetristaScript.svg#LetristaScript") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url("../../fonts//ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts//ProximaNova-Light.otf") format("opentype"), url("../../fonts//ProximaNova-Light.woff") format("woff"), url("../../fonts//ProximaNova-Light.ttf") format("truetype"), url("../../fonts//ProximaNova-Light.svg#ProximaNova-Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url("../../fonts//ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts//ProximaNova-Regular.otf") format("opentype"), url("../../fonts//ProximaNova-Regular.woff") format("woff"), url("../../fonts//ProximaNova-Regular.ttf") format("truetype"), url("../../fonts//ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Semibold';
+  src: url("../../fonts//ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../../fonts//ProximaNova-Semibold.otf") format("opentype"), url("../../fonts//ProximaNova-Semibold.woff") format("woff"), url("../../fonts//ProximaNova-Semibold.ttf") format("truetype"), url("../../fonts//ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -301,8 +329,8 @@ th {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.4.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
+  src: url("../../fonts/fontawesome-webfont.eot?v=4.4.0");
+  src: url("../../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"), url("../../fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"), url("../../fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"), url("../../fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("../../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
