@@ -7,12 +7,6 @@
 
 // FONT
 
-@mixin heading-style($heading-size,$heading-text-transform){
-	font-size:$heading-size;
-	text-transform: $heading-text-transform;	
-}
-
-
 @mixin font($family,$size,$color,$text-transform){
 	font-family:$family;
 	font-size:$size;

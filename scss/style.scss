@@ -4,6 +4,107 @@
 
 @import "_bootstrap.scss";
 
+a,
+a:hover{
+	text-decoration: none;
+}
+
+ul, ul li{
+
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.heading{
+
+	&--primary{
+		@include font($font-family-often,16px,$gray-lighter,uppercase);
+	}
+
+	&--secondary{
+		@include font($font-family-main,16px,$gray-lighter,uppercase);
+	}
+
+	&--thirdly{
+		@include font($font-family-main,14px,$gray-lighter,none);
+	}
+}
+
+.sidebar{
+
+	&--left{
+		position: fixed;
+		left:0;
+		top:0;
+		bottom:-9999px;
+		background: $brand-primary;
+	}
+
+	&__logo{
+		background-color: $brand-warning;
+		@include padding-custom(30px, 60px, 30px, 60px)
+	}
+
+	&--right{
+		position: fixed;
+		right:0;
+		top:0;
+		bottom:-9999px;
+		background: $brand-primary;
+		
+		&__heading{
+			background: $brand-success;
+			@include padding-custom(45px, 68px, 46px, 68px);
+			@include font($font-family-often,16px,$gray-lighter,uppercase);
+		}
+	}
 
 
- 
+}
+
+.nav{
+
+	
+	@include padding-custom(20px, 0, 5px, 0);
+	
+	&--author{
+		
+		border-top: 1px solid darken($brand-primary, 20%);
+		
+	};
+
+	&--source{
+
+		border-top: 1px solid darken($brand-primary, 20%);
+		
+	};
+	
+	&__item{
+		
+		@include margin-vertical(0, 5px);
+	}
+
+	&__icon{
+		color: $brand-danger;
+		@include padding-horizontal(10px, 20px);
+	}
+	
+	&__link{
+
+		display: block;
+		@include padding-vertical(15px, 15px);
+		@include font($font-family-often,16px,$gray-base,uppercase);
+		
+		&:hover,
+		&:focus{
+			color: $brand-danger;
+			background: lighten($brand-danger, 35%);
+			
+		}
+	}
+}
+
+.content{
+	float:left;
+}

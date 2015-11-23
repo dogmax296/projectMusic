@@ -8,3 +8,18 @@ $font-family-main:		'ProximaNova-Light';
 $font-family-often:		'ProximaNova-Semibold';
 $font-family-seldom:	'ProximaNova-Regular';
 $font-family-rare:		'LetristaScript';
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            #212229 !default;
+$gray:                   #b1b1b1 !default;
+$gray-lighter:           #FFF !default;
+
+$brand-primary:         #e9e9e9 !default; // bg sidebars
+$brand-success:         #91c3d1 !default; //volume trigger
+$brand-info:            #222329 !default; //bg-footer
+$brand-warning:         #ca324a !default; // bg logo
+$brand-danger:          #c93249 !default; // pink color of text and icons
