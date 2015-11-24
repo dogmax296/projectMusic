@@ -63,6 +63,11 @@ ul, ul li{
 
 }
 
+.main{
+
+	@include padding-horizontal(224px, 223px)
+}
+
 .nav{
 
 	
@@ -106,6 +111,19 @@ ul, ul li{
 		&--playlist{
 			@include padding-vertical(10px, 10px);
 			display: block;
+			
+			&:hover,
+			&:focus{
+				.singer__img__icon-holder{
+					display: inline-block;
+				}
+				.singer__song,.singer__name{
+					color: $brand-success;
+				}
+				
+			}
+
+			
 		}
 	}
 
@@ -115,6 +133,7 @@ ul, ul li{
 }
 
 .content{
+
 	float:left;
 }
 
@@ -128,6 +147,29 @@ ul, ul li{
 		display: inline-block;
 		vertical-align: middle;
 		@include margin-horizontal(10px, 20px);
+		position: relative;
+		
+		
+		&__icon{
+
+			color: $gray-lighter;
+			margin-top: 20%;
+			
+			&-holder{
+				background-color: rgba(145, 195, 209, 0.68); //$brand-success opacity
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    border-radius: 50%;
+			    text-align: center;
+			    display: none;
+			    
+			}
+			
+			
+		}
 	}
 
 	&__info{
@@ -143,6 +185,29 @@ ul, ul li{
 	&__name{
 		display: block;
 		@include font($font-family-seldom,14px,$gray,none);
+	}
+
+	&__wave{
+		@include background;
+		height: 50px;
+		width: 60px;
+		display: inline-block;
+		vertical-align: middle;
+		display: none;
+	}
+
+	&--active{
+
+		.singer__img__icon-holder,.singer__wave{
+			display: inline-block;
+		}
+
+		.singer__song,.singer__name{
+			color: $brand-success;
+		}
+
+
+		
 	}
 }
 
@@ -185,3 +250,32 @@ ul, ul li{
 		
 	}
 }
+
+.search{
+
+	@include padding-vertical(10px, 10px);
+	border:none;
+	outline: none;
+	background: transparent;
+	width: 250px;
+	@include font($font-family-main,16px,$brand-primary,none);
+
+	&-holder{
+
+		border: 2px solid $brand-primary;
+		border-radius: 15px;
+		@include padding-horizontal(10px, 10px);
+	}
+
+	&__btn{
+		@include padding-vertical(10px, 10px);
+		border:none;
+		background: transparent;
+		outline: none;
+	}
+
+	&__icon{
+		color: $brand-danger;
+	}
+}
+
