@@ -240,49 +240,66 @@
 				
 				<div class="content__header">
 
-					<!-- START search-holder -->
-					
-					<div class="search-holder">
+					<div class="container-fluid">
 
-						<form action="" class="search__form">
+						<div class="row">
 
-							<input type="search" class="search" placeholder="Search Library">
-
-							<button class="search__btn">
+							<div class="col-sm-12">
 								
-								<i class="fa fa-search search__icon"></i>
+								<div class="row">
+									
+									<!-- START search-holder -->
+							
+									<div class="search-holder col-sm-4">
 
-							</button>
+										<form action="" class="search__form">
 
-						</form>
+											<input type="search" class="search" placeholder="Search Library">
 
-					</div>
+											<button class="search__btn">
+												
+												<i class="fa fa-search search__icon"></i>
 
-					<!-- END search-holder -->
+											</button>
 
-					<!-- START user -->
+										</form>
 
-					<div class="user">
+									</div>
 
-						<!-- START user__avatar -->
-						
-						<div class="user__avatar">
+									<!-- END search-holder -->
 
-							<img src="" alt="">
+									<!-- START user -->
+
+									<div class="user col-sm-4 col-sm-offset-4">
+
+										<div class="row">
+
+											<!-- START user__avatar -->
+											
+											<div class="user__avatar" style="background-image:url(images/dark/face.jpg)"></div>
+
+											<!-- END user__avatar -->
+
+											<!-- START user__name -->
+
+											<div class="user__name">Barack Obama</div>
+
+											<!-- END user__name -->
+
+										</div>
+
+									</div>
+
+									<!-- END user -->
+
+								</div>
+
+							</div>
 
 						</div>
-
-						<!-- END user__avatar -->
-
-						<!-- START user__name -->
-
-						<div class="user__name"></div>
-
-						<!-- END user__name -->
-
 					</div>
 
-					<!-- END user -->
+						
 
 				</div>
 
@@ -290,7 +307,44 @@
 
 				<!-- START top-artists-carousel -->
 
-				<div class="top-artists-carousel"></div>
+				<div class="top-artists-carousel">
+					
+					<div id="owl-demo" class="owl-carousel owl-theme">
+ 
+					  <div class="item">
+
+					  	<div class="best-artist" style="background-image: url(images/dark/red-fang.jpg)">
+					  		
+					  		<div class="best-artist__caption"></div>
+
+					  	</div>
+
+					  </div>
+
+					  <div class="item">
+
+						<div class="best-artist" style="background-image: url(images/dark/led-zeppelin.jpg)">
+					  		
+					  		<div class="best-artist__caption"></div>
+
+					  	</div>
+					  	
+
+					  </div>
+
+					  <div class="item">
+
+					  	<div class="best-artist" style="background-image: url(images/dark/30stm.jpg)">
+					  		
+					  		<div class="best-artist__caption"></div>
+
+					  	</div>
+
+					  </div>
+					 
+					</div>
+
+				</div>
 
 				<!-- END top-artists-carousel -->
 
@@ -665,10 +719,14 @@
 		<!-- END footer -->
 		
 		<!-- JQUERY -->
-		<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 		<!-- JS -->
 		<!-- <script src="js/bootstrap.js"></script> -->
+
+		<!-- OWL-CAROUSEL -->
+		<script src="js/owl-carousel/owl.carousel.min.js"></script>
+		<script src="js/owl-carousel/owl-carousel-top.js"></script>
 
 	</body>
 

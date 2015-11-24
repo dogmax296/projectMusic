@@ -12,7 +12,8 @@
 @import "bootstrap/normalize";
 @import "bootstrap/print";
 // @import "bootstrap/glyphicons";
-@import "_font-awesome";
+
+@import "_font-awesome"; //FA ICONS
 
 // Core CSS
 @import "bootstrap/scaffolding";
@@ -51,6 +52,10 @@
 // @import "bootstrap/tooltip";
 // @import "bootstrap/popovers";
 // @import "bootstrap/carousel";
+
+@import "owl-carousel/_owl-carousel";
+@import "owl-carousel/_owl-theme";
+@import "owl-carousel/_owl-transitions";
 
 // Utility classes
 @import "bootstrap/utilities";

@@ -134,7 +134,12 @@ ul, ul li{
 
 .content{
 
-	float:left;
+	@include padding-horizontal(15px, 15px);
+	
+	&__header{
+
+		@include padding-vertical(10px, 10px);
+	}
 }
 
 .singer{
@@ -257,7 +262,7 @@ ul, ul li{
 	border:none;
 	outline: none;
 	background: transparent;
-	width: 250px;
+	width: 85%;
 	@include font($font-family-main,16px,$brand-primary,none);
 
 	&-holder{
@@ -265,10 +270,12 @@ ul, ul li{
 		border: 2px solid $brand-primary;
 		border-radius: 15px;
 		@include padding-horizontal(10px, 10px);
+		@include margin-vertical(7px, 0);
 	}
 
 	&__btn{
 		@include padding-vertical(10px, 10px);
+		width: 12%;
 		border:none;
 		background: transparent;
 		outline: none;
@@ -279,3 +286,31 @@ ul, ul li{
 	}
 }
 
+.user{
+	
+	text-align: right;
+	
+	&__avatar{
+		width: 60px;
+		height: 60px;
+		@include background;
+		border-radius:50%;
+		display: inline-block;
+		vertical-align: middle;
+		@include margin-horizontal(15px, 0)
+	};
+
+	&__name{
+		display: inline-block;
+		vertical-align: middle;
+		@include font($font-family-often,16px,$brand-primary,uppercase);
+	};
+}
+
+.best-artist{
+	height: 300px;
+	width: 900px;
+	@include background-best;
+
+	&__caption{}
+}

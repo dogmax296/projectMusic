@@ -5,6 +5,11 @@
 	background-size: cover;	
 }
 
+@mixin background-best{
+	background: no-repeat center top;
+	background-size: cover;	
+}
+
 // FONT
 
 @mixin font($family,$size,$color,$text-transform){
