@@ -18,6 +18,9 @@ ul, ul li{
 
 .heading{
 
+	margin:0;
+	padding: 0;
+
 	&--primary{
 		@include font($font-family-often,16px,$gray-lighter,uppercase);
 	}
@@ -28,6 +31,10 @@ ul, ul li{
 
 	&--thirdly{
 		@include font($font-family-main,14px,$gray-lighter,none);
+	}
+
+	&--fourthly{
+		@include font($font-family-rare,33px,$gray-lighter,none);
 	}
 }
 
@@ -85,10 +92,7 @@ ul, ul li{
 		
 	};
 	
-	&__item{
-		
-		@include margin-vertical(0, 5px);
-	}
+	
 
 	&__icon{
 		color: $brand-danger;
@@ -311,6 +315,105 @@ ul, ul li{
 	height: 300px;
 	width: 900px;
 	@include background-best;
+	position: relative;
 
-	&__caption{}
+	&__caption{
+
+		&--first{
+			position: absolute;
+			top: 20px;
+		    bottom: 0px;
+		    left: 40px;
+		    right: 0px;
+		};
+		
+		&--second{
+			position: absolute;
+			top: 180px;
+			bottom: 0px;
+			left: 680px;
+			right: 0;
+		};
+		
+		&--third{
+			position: absolute;
+			top: 10px;
+		    bottom: 0;
+		    left: 590px;
+		    right: 0;
+		};
+	};
+
+	&__carousel{
+		@include margin-vertical(33px, 10px);
+	}
+}
+
+.grid{
+
+	&__item{
+		@include padding-vertical(15px, 15px);
+	}
+
+	&__link{
+
+		padding-bottom: 100%;
+		display: block;
+		@include background;
+		&:hover,
+			&:focus{
+				+.grid__caption{
+					opacity: 0.99;
+				}
+			}
+	}
+
+	&__caption{
+		background: rgba(0, 0, 0, 0.5); //bg transparent
+		overflow: auto;
+		position: absolute;
+	    top: 15px;
+	    left: 15px;
+	    right: 15px;
+	    bottom: 15px; 
+	    @include padding-horizontal(10px, 10px);
+	    opacity:0;
+
+		&--top{
+			
+		}
+	}
+
+	&__play-btn{
+		display: block;
+		color: $gray-lighter;
+		text-align: center;
+		@include margin-vertical(0, 12px);
+	}
+
+	&__like{
+
+		&__item{
+			display: inline-block;
+		}
+
+		&__link{
+			display: block;
+			
+		}
+
+		&__btns{
+			float:left;
+			@include margin-vertical(10px, 0);
+		}
+
+		&__number{
+			float:right;
+			@include font($font-family-rare,28px,$brand-danger,uppercase);
+		}
+	}
+
+	&__heading{
+		@include margin-custom(15px, 0, 15px, 0);
+	}
 }

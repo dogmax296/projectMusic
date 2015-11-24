@@ -4544,6 +4544,11 @@ ul, ul li {
   padding: 0;
 }
 
+.heading {
+  margin: 0;
+  padding: 0;
+}
+
 .heading--primary {
   font-family: "ProximaNova-Semibold";
   font-size: 16px;
@@ -4561,6 +4566,13 @@ ul, ul li {
 .heading--thirdly {
   font-family: "ProximaNova-Light";
   font-size: 14px;
+  color: #FFF;
+  text-transform: none;
+}
+
+.heading--fourthly {
+  font-family: "LetristaScript";
+  font-size: 33px;
   color: #FFF;
   text-transform: none;
 }
@@ -4619,11 +4631,6 @@ ul, ul li {
 
 .nav--source {
   border-top: 1px solid #b6b6b6;
-}
-
-.nav__item {
-  margin-top: 0;
-  margin-bottom: 5px;
 }
 
 .nav__icon {
@@ -4861,6 +4868,103 @@ ul, ul li {
   width: 900px;
   background: no-repeat center top;
   background-size: cover;
+  position: relative;
+}
+
+.best-artist__caption--first {
+  position: absolute;
+  top: 20px;
+  bottom: 0px;
+  left: 40px;
+  right: 0px;
+}
+
+.best-artist__caption--second {
+  position: absolute;
+  top: 180px;
+  bottom: 0px;
+  left: 680px;
+  right: 0;
+}
+
+.best-artist__caption--third {
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 590px;
+  right: 0;
+}
+
+.best-artist__carousel {
+  margin-top: 33px;
+  margin-bottom: 10px;
+}
+
+.grid__item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.grid__link {
+  padding-bottom: 100%;
+  display: block;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.grid__link:hover + .grid__caption,
+.grid__link:focus + .grid__caption {
+  opacity: 0.99;
+}
+
+.grid__caption {
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  opacity: 0;
+}
+
+.grid__play-btn {
+  display: block;
+  color: #FFF;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.grid__like__item {
+  display: inline-block;
+}
+
+.grid__like__link {
+  display: block;
+}
+
+.grid__like__btns {
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.grid__like__number {
+  float: right;
+  font-family: "LetristaScript";
+  font-size: 28px;
+  color: #c93249;
+  text-transform: uppercase;
+}
+
+.grid__heading {
+  margin-top: 15px;
+  margin-right: 0;
+  margin-bottom: 15px;
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
