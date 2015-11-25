@@ -100,7 +100,9 @@ ul, ul li{
 	}
 	
 	&__link{
-
+		
+		transition: all ease-out 0.3s;
+		background:transparent;
 		display: block;
 		@include padding-vertical(15px, 15px);
 		@include font($font-family-often,16px,$gray-base,uppercase);
@@ -113,13 +115,14 @@ ul, ul li{
 		}
 
 		&--playlist{
+
 			@include padding-vertical(10px, 10px);
 			display: block;
 			
 			&:hover,
 			&:focus{
 				.singer__img__icon-holder{
-					display: inline-block;
+					opacity: 0.99;
 				}
 				.singer__song,.singer__name{
 					color: $brand-success;
@@ -165,6 +168,7 @@ ul, ul li{
 			margin-top: 20%;
 			
 			&-holder{
+				transition: all ease-out 0.3s;
 				background-color: rgba(145, 195, 209, 0.68); //$brand-success opacity
 				position: absolute;
 			    top: 0;
@@ -173,7 +177,7 @@ ul, ul li{
 			    bottom: 0;
 			    border-radius: 50%;
 			    text-align: center;
-			    display: none;
+			    opacity:0;
 			    
 			}
 			
@@ -187,11 +191,13 @@ ul, ul li{
 	}
 
 	&__song{
+		transition: all ease-out 0.3s;
 		display: block;
 		@include font($font-family-seldom,16px,$gray-darker,none);
 	}
 
 	&__name{
+		transition: all ease-out 0.3s;
 		display: block;
 		@include font($font-family-seldom,14px,$gray,none);
 	}
@@ -208,7 +214,7 @@ ul, ul li{
 	&--active{
 
 		.singer__img__icon-holder,.singer__wave{
-			display: inline-block;
+			opacity: 0.99;
 		}
 
 		.singer__song,.singer__name{
@@ -228,6 +234,7 @@ ul, ul li{
 	outline:none;
 	
 	&--download{
+		transition: all ease-out 0.3s;
 		background: transparent;
 		@include font($font-family-seldom,18px,$brand-warning,none);
 		&:hover,
@@ -242,6 +249,7 @@ ul, ul li{
 	&-holder{
 		text-align: center;
 		border-top: 1px solid darken($brand-primary, 20%);
+		@include padding-vertical(25px, 25px);
 	}
 }
 
@@ -363,7 +371,7 @@ ul, ul li{
 		&:hover,
 			&:focus{
 				+.grid__caption{
-					opacity: 0.99;
+					display: block;
 				}
 			}
 	}
@@ -377,7 +385,7 @@ ul, ul li{
 	    right: 15px;
 	    bottom: 15px; 
 	    @include padding-horizontal(10px, 10px);
-	    opacity:0;
+	    display: none;
 
 		&--top{
 			

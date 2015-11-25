@@ -4640,6 +4640,9 @@ ul, ul li {
 }
 
 .nav__link {
+  -webkit-transition: all ease-out 0.3s;
+          transition: all ease-out 0.3s;
+  background: transparent;
   display: block;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -4663,7 +4666,7 @@ ul, ul li {
 
 .nav__link--playlist:hover .singer__img__icon-holder,
 .nav__link--playlist:focus .singer__img__icon-holder {
-  display: inline-block;
+  opacity: 0.99;
 }
 
 .nav__link--playlist:hover .singer__song,
@@ -4708,6 +4711,8 @@ ul, ul li {
 }
 
 .singer__img__icon-holder {
+  -webkit-transition: all ease-out 0.3s;
+          transition: all ease-out 0.3s;
   background-color: rgba(145, 195, 209, 0.68);
   position: absolute;
   top: 0;
@@ -4716,7 +4721,7 @@ ul, ul li {
   bottom: 0;
   border-radius: 50%;
   text-align: center;
-  display: none;
+  opacity: 0;
 }
 
 .singer__info {
@@ -4725,6 +4730,8 @@ ul, ul li {
 }
 
 .singer__song {
+  -webkit-transition: all ease-out 0.3s;
+          transition: all ease-out 0.3s;
   display: block;
   font-family: "ProximaNova-Regular";
   font-size: 16px;
@@ -4733,6 +4740,8 @@ ul, ul li {
 }
 
 .singer__name {
+  -webkit-transition: all ease-out 0.3s;
+          transition: all ease-out 0.3s;
   display: block;
   font-family: "ProximaNova-Regular";
   font-size: 14px;
@@ -4751,7 +4760,7 @@ ul, ul li {
 }
 
 .singer--active .singer__img__icon-holder, .singer--active .singer__wave {
-  display: inline-block;
+  opacity: 0.99;
 }
 
 .singer--active .singer__song, .singer--active .singer__name {
@@ -4769,6 +4778,8 @@ ul, ul li {
 }
 
 .btn--download {
+  -webkit-transition: all ease-out 0.3s;
+          transition: all ease-out 0.3s;
   background: transparent;
   font-family: "ProximaNova-Regular";
   font-size: 18px;
@@ -4785,6 +4796,8 @@ ul, ul li {
 .download-holder {
   text-align: center;
   border-top: 1px solid #b6b6b6;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .slogan__top {
@@ -4914,7 +4927,7 @@ ul, ul li {
 
 .grid__link:hover + .grid__caption,
 .grid__link:focus + .grid__caption {
-  opacity: 0.99;
+  display: block;
 }
 
 .grid__caption {
@@ -4927,7 +4940,7 @@ ul, ul li {
   bottom: 15px;
   padding-right: 10px;
   padding-left: 10px;
-  opacity: 0;
+  display: none;
 }
 
 .grid__play-btn {
