@@ -4533,8 +4533,10 @@ hr {
   }
 }
 
-a,
-a:hover {
+a:hover,
+a:focus,
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -4581,8 +4583,9 @@ ul, ul li {
   position: fixed;
   left: 0;
   top: 0;
-  bottom: -9999px;
+  bottom: 0;
   background: #e9e9e9;
+  overflow-y: auto;
 }
 
 .sidebar__logo {
@@ -4597,7 +4600,7 @@ ul, ul li {
   position: fixed;
   right: 0;
   top: 0;
-  bottom: -9999px;
+  bottom: 0;
   background: #e9e9e9;
 }
 
@@ -4611,11 +4614,6 @@ ul, ul li {
   font-size: 16px;
   color: #FFF;
   text-transform: uppercase;
-}
-
-.main {
-  padding-right: 224px;
-  padding-left: 223px;
 }
 
 .nav {
@@ -4680,9 +4678,13 @@ ul, ul li {
   padding-right: 0;
   padding-bottom: 5px;
   padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .content {
+  margin-right: 224px;
+  margin-left: 223px;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -4700,8 +4702,8 @@ ul, ul li {
   background-size: cover;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
-  margin-left: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
   position: relative;
 }
 
@@ -4756,7 +4758,7 @@ ul, ul li {
   width: 60px;
   display: inline-block;
   vertical-align: middle;
-  display: none;
+  opacity: 0;
 }
 
 .singer--active .singer__img__icon-holder, .singer--active .singer__wave {
@@ -4925,8 +4927,8 @@ ul, ul li {
   background-size: cover;
 }
 
-.grid__link:hover + .grid__caption,
-.grid__link:focus + .grid__caption {
+.grid__link:hover .grid__caption,
+.grid__link:focus .grid__caption {
   display: block;
 }
 

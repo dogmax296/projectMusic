@@ -5,8 +5,12 @@
 @import "_bootstrap.scss";
 
 a,
-a:hover{
-	text-decoration: none;
+a{
+	&:hover,
+	&:focus{
+		text-decoration: none;
+	}
+	
 }
 
 ul, ul li{
@@ -44,8 +48,9 @@ ul, ul li{
 		position: fixed;
 		left:0;
 		top:0;
-		bottom:-9999px;
+		bottom:0;
 		background: $brand-primary;
+		overflow-y:auto;
 	}
 
 	&__logo{
@@ -57,7 +62,7 @@ ul, ul li{
 		position: fixed;
 		right:0;
 		top:0;
-		bottom:-9999px;
+		bottom:0;
 		background: $brand-primary;
 		
 		&__heading{
@@ -70,10 +75,6 @@ ul, ul li{
 
 }
 
-.main{
-
-	@include padding-horizontal(224px, 223px)
-}
 
 .nav{
 
@@ -119,6 +120,7 @@ ul, ul li{
 			@include padding-vertical(10px, 10px);
 			display: block;
 			
+			
 			&:hover,
 			&:focus{
 				.singer__img__icon-holder{
@@ -136,11 +138,13 @@ ul, ul li{
 
 	&--playlist{
 		@include padding-custom(15px, 0, 5px, 0);
+		max-height:300px;
+		overflow-y:auto;
 	}
 }
 
 .content{
-
+	@include margin-horizontal(224px, 223px);
 	@include padding-horizontal(15px, 15px);
 	
 	&__header{
@@ -158,7 +162,7 @@ ul, ul li{
 		@include background;
 		display: inline-block;
 		vertical-align: middle;
-		@include margin-horizontal(10px, 20px);
+		@include margin-horizontal(5px, 5px);
 		position: relative;
 		
 		
@@ -208,7 +212,7 @@ ul, ul li{
 		width: 60px;
 		display: inline-block;
 		vertical-align: middle;
-		display: none;
+		opacity:0;
 	}
 
 	&--active{
@@ -370,7 +374,7 @@ ul, ul li{
 		@include background;
 		&:hover,
 			&:focus{
-				+.grid__caption{
+				.grid__caption{
 					display: block;
 				}
 			}
