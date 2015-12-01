@@ -253,7 +253,7 @@ ul, ul li{
 	&-holder{
 		text-align: center;
 		border-top: 1px solid darken($brand-primary, 20%);
-		@include padding-vertical(25px, 25px);
+		@include padding-vertical(10px, 10px);
 	}
 }
 
@@ -374,8 +374,10 @@ ul, ul li{
 		@include background;
 		&:hover,
 			&:focus{
+				
 				.grid__caption{
-					display: block;
+					opacity:0.99;
+					
 				}
 			}
 	}
@@ -389,7 +391,8 @@ ul, ul li{
 	    right: 15px;
 	    bottom: 15px; 
 	    @include padding-horizontal(10px, 10px);
-	    display: none;
+	    opacity:0;
+	    transition: all ease-out 0.3s;
 
 		&--top{
 			
@@ -401,6 +404,11 @@ ul, ul li{
 		color: $gray-lighter;
 		text-align: center;
 		@include margin-vertical(0, 12px);
+		transition: all ease-out 0.3s;
+		&:hover,
+		&:focus{
+			color: $brand-danger;
+		}
 	}
 
 	&__like{
@@ -411,6 +419,28 @@ ul, ul li{
 
 		&__link{
 			display: block;
+			&:hover,
+			&:focus{
+				.grid__like__icon--static{
+					display: none;
+				}
+
+				.grid__like__icon--hover{
+					display: inline-block;
+				}
+
+
+			}
+
+			&--active{
+				.grid__like__icon--static{
+					display: none;
+				}
+
+				.grid__like__icon--hover{
+					display: inline-block;
+				}
+			}
 			
 		}
 
@@ -423,9 +453,176 @@ ul, ul li{
 			float:right;
 			@include font($font-family-rare,28px,$brand-danger,uppercase);
 		}
+
+		&__icon{
+			&--hover{
+				display: none;
+				color: $brand-danger;
+			}
+
+
+		}
 	}
 
 	&__heading{
 		@include margin-custom(15px, 0, 15px, 0);
 	}
+}
+
+.footer{
+	background-color: $brand-info;
+	@include padding-vertical(10px, 10px);
+	position: fixed;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+
+// PLayer
+
+.player{
+	
+}
+
+.author{
+
+	&__cover{
+
+		@include background;
+		height: 50px;
+		width: 50px;
+		border-radius:50%;
+		display: inline-block;
+    	vertical-align: middle;
+	}
+	
+}
+
+.player{
+
+	&__hidden{
+
+		display: none;
+	}
+	
+	&__controls{
+
+		cursor: pointer;
+		display: inline-block;
+    	vertical-align: middle;
+    	color: $gray-lighter;
+    	
+    	.player__visible{
+    		display: block;
+    	}
+
+    	&-holder{
+    		text-align: center;
+    	}
+	}
+
+	&__play{
+		float: left;
+		@include padding-horizontal(5px, 5px);
+		&:hover,
+		&:focus{
+			color: $brand-danger;
+		}
+	}
+
+	&__pause{
+		float: left;
+		@include padding-horizontal(5px, 5px);
+		display: none;
+		&:hover,
+		&:focus{
+			color: $brand-danger;
+		}
+	}
+
+	&__fwd{
+		float: left;
+		@include padding-horizontal(5px, 5px);
+		&:hover,
+		&:focus{
+			color: $brand-danger;
+		}
+	}
+
+	&__rew{
+		float: left;
+		@include padding-horizontal(5px, 5px);
+		&:hover,
+		&:focus{
+			color: $brand-danger;
+		}
+	}
+}
+
+.title, .artist{
+
+	user-select:none;
+}
+
+.title{
+	@include font($font-family-main,14px,$gray-lighter,uppercase);
+}
+
+.artist{
+	@include font($font-family-main,14px,$gray-lighter,none);
+}
+
+.volume{
+
+	height: 11px;
+	width: 112px;
+    background: lighten($brand-info, 15%);
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.tracker {
+    height: 15px;
+    width: 700px;
+    background: lighten($brand-info, 15%);
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.ui-slider-range {
+    background-color: $brand-danger;
+    height: 100%;
+    
+}
+
+.volume .ui-slider-handle {
+    background-color: $brand-danger;
+    height: 13px;
+    width: 13px;
+}
+
+
+
+
+/*CUSTOM*/
+
+.author__info-holder{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.author__info{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.volume__ico{
+    display: inline-block;
+        color: #fff;
+}
+
+.volume-holder{
+    display: inline-block;
 }
